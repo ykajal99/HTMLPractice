@@ -1,0 +1,11 @@
+/*
+ * This code is for Internal Salesforce use only, and subject to change without notice.
+ * Customers shouldn't reference this file in any web pages.
+ */
+Ext.require("Ext.container.Viewport");
+Ext.application({name:"Execute Anonymous",launch:function(){document.title="Execute Anonymous";!window.opener||!window.opener.apex?(Ext.Msg.alert("Error","Execute anonymous needs to be opened from the dev console"),window.close()):(window.onbeforeunload=function(){window.opener.apex.execanon.ExecuteAnonymous.save(Ext.getCmp("execAnon").editor.getValue())},SfdcDevConsole.Preferences=window.opener.SfdcDevConsole.Preferences,apex.execanon.ExecuteAnonymous.openLog=window.opener.apex.execanon.ExecuteAnonymous.openLog,
+Ext.create("Ext.container.Viewport",{id:"execAnon",layout:"fit",focus:function(){this.editor.focus()},items:[{title:"Exec",xtype:"execanoneditor",execAnon:function(a){var b=this,c=window.opener,d=function(a){a=escapeHTML(a);var b=Ext.Msg.alert(LC.getLabel("DeveloperConsole","ExecuteAnonError"),a,function(){window.onfocus=function(){b.focus();window.onfocus=null};Ext.getCmp("execAnon").focus()})};!a||Sfdc.isEmpty(Sfdc.String.trim(a))?d("No code was entered. Enter the Apex code to execute and try again."):
+(Ext.MessageBox.progress("Executing","Sending Request","Sending..."),c.apex.ide.IDE.executeAnonymous(a,b.openLogButton.checked,function(a){window.opener.apex.execanon.ExecuteAnonymous.save(b.editor.getValue());Ext.MessageBox.updateProgress(1,"Finished");Ext.MessageBox.hide()},function(a){d(a+"")}),b.openLogButton.checked&&c.focus())},changeOpenLogPref:function(a,b){window.opener.apex.execanon.ExecuteAnonymous.openLog=b},finishedLoading:function(a){var b=a.ownerCt.ownerCt;b.editor=a;b.ownerCt.editor=
+a;a.setValue(window.opener.apex.execanon.ExecuteAnonymous.get());Ext.getCmp("execAnon").focus();a=a.codeEditor;a.editorInfo=b;window.opener.SfdcDevConsole.Core.Autocomplete.Apex.getInstance(a)},listeners:{afterrender:function(a){a.keymap=new Ext.KeyMap(a.getEl(),[{key:"e",ctrl:!0,fn:function(){var b=a.editor.getSelection();b?a.execAnon(b):a.execAnon(a.editor.getValue())},defaultEventAction:"stopEvent"}])}}}]},this).doLayout())}});
+
+//# sourceMappingURL=/javascript/1635874031000/sfdc/source/ApexExecAnon.js.map

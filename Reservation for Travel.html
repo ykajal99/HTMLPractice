@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>Tavel Reservation Form</title>
+</head>
+<body>
+<div class="container">
+<h1>Travel Reservation Form</h1>
+<h3>* denotes mandotory</h3>
+<form id="registration_form" method="POST">
+  <label>Full name*:</label> <br>
+  <input type="text" name="full_name" id="name" placeholder="Enter Your Name">
+  <br><br> 
+  <label>Email address*:</label> <br>
+  <input type="text" name="email_addr" id="name" placeholder="Enter Your Email">
+  <br><br>
+  <label>Select Tour Package* :</label> <br>	
+   <select>
+    <option value="Please Select" >Please Select</options>
+	 <option value="Goa" >Goa</options>
+	 <option value="Kashmir" >Kashmir</options>
+	 <option value="Rajasthan" >Rajasthan</options>
+   </select>
+   <br><br>
+  <label>Arrival date*:</label> <br>
+  <input type="text" name="arv_dt" id="name" placeholder="yyyy/mm/dd">
+  <br><br>
+      <label>Number of persons*:</label> <br>
+      <input type="text" name="persons" id="name">
+      <br><br>
+      <label>What would you want to avail?*</label> <br> 
+      Boarding<input type="checkbox" name="facilities[]" value="boarding"> <br>
+      Fooding<input type="checkbox" name="facilities[]" value="fooding"> <br>
+      Sight seeing<input type="checkbox" name="facilities[]" value="sightseeing">
+      <br><br>
+   <label>Discount Coupon code:</label> <br>
+   <input type="text" name="dis_code" value="">
+   <br><br>
+      <label>Terms and conditions*</label> <br>
+   <input type="radio" name="tnc" value="agree" checked>I agree
+   <input type="radio" name="tnc" value="disagree" >I disagree
+   <br><br>
+   <button type="submit" name="submit">
+    Complete reservation
+  </button>
+</form>
+</body>
+</html>

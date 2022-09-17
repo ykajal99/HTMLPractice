@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/jpg" href="img/whatsapp.png">
+    
+    <title>WhatsApp</title>
+</head>
+
+<body>
+    <div class="sidebar">
+      <div class="header">
+       <div class="kajal">
+        <img src="img/kajal.png" alt="">
+       </div>
+       <div class="chat-header-right">
+         <img src="img/circle-notch-solid.png" alt="">
+         <img src="img/chat.png" alt="">
+         <img src="img/more.png" alt="">
+       </div>
+      </div> 
+      <div class="sidebar-search">
+        <div class="sidebar-search-container">
+            <img src="img/search solid.png" alt="">
+        
+            <input type="text" placeholder="Search Users">
+            <div ng-app="myApp" ng-controller="namesCtrl">
+                <input ng-repeat="x in names | filter:test">
+                   
+                
+            </div>
+        </div>
+      </div> 
+    
+
+    <div class="sidebar-chats">
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Bhai.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Bhai</h4>
+                <p>Yhi main h</p>
+            </div>
+            <div class="time">
+                <p>9:14 am</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Didu.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Didu</h4>
+                <p>Hmmm sure..Byee</p>
+            </div>
+            <div class="time">
+                <p>8:30 am</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Jiju.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Jiju</h4>
+                <p>Isme edit kya karna h?</p>
+            </div>
+            <div class="time">
+                <p>7:47 am</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Shreya.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Shreya</h4>
+                <p>Ye Modi hame 15 lacs rupaye kb bhejenge?</p>
+            </div>
+            <div class="time">
+                <p>yesterday</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Kaveri.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Kaveri</h4>
+                <p>Same here yr</p>
+            </div>
+            <div class="time">
+                <p>yesterday</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Mummy.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Mummy</h4>
+                <p>Aadhar card bhej diya h</p>
+            </div>
+            <div class="time">
+                <p>08/09/2022</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Sneha.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Sneha</h4>
+                <p>I m happy for you</p>
+            </div>
+            <div class="time">
+                <p>08/09/2022</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Kiran.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Kiran</h4>
+                <p>Yr ye hame government job kb lagegi?</p>
+            </div>
+            <div class="time">
+                <p>07/09/2022</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Keertana.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Keertana</h4>
+                <p>Thank You</p>
+            </div>
+            <div class="time">
+                <p>05/09/2022</p>
+            </div>
+        </div>
+        <div class="sidebar-chat">
+            <div class="chat-kajal">
+                <img src="img/Soumya.jpg" alt="">
+            </div>
+            <div class="chat-info">
+                <h4>Soumya</h4>
+                <p>Chlo khush raho</p>
+            </div>
+            <div class="time">
+                <p>03/09/2022</p>
+            </div>
+        </div>
+    </div>
+  </div>
+     <div class="message-container">
+        <div class="header">
+            <div class="chat-title">
+                <div class="kajal">
+                    <img src="img/Didu.jpg" alt="">
+                </div>
+                <div class="message-header-content">
+                    <h4>Didu</h4>
+                    <p>Last seen 8:30 am</p>
+                </div>
+            </div>
+            <div class="chat-header-right">
+                <img src="img/search solid.png" alt="">
+                <img src="img/more.png" alt="">
+            </div>
+        </div>
+        <div class="message-content">
+            <p class="chat-message">Hey Kajal, Training kaisi chal rhi? <span class="chat-timestamp">8:01 am</span></p>
+            <p class="chat-message chat-sent">Hi di, Training achi chal rhi <span class="chat-timestamp">8:02 am</span></p>
+            <p class="chat-message">okay..Ache se padhayi karo <span class="chat-timestamp">8:03 am</span></p>
+            <p class="chat-message chat-sent">Han Jarur <span class="chat-timestamp">8:03 am</span></p>
+            <p class="chat-message">Aur kuch samajh na aye to mujhse puch liya karo <span class="chat-timestamp">8:04 am</span></p>
+            <p class="chat-message chat-sent">Okay di <span class="chat-timestamp">8:04 am</span></p>
+            <p class="chat-message">Had your breakfast? <span class="chat-timestamp">8:05 am</span></p>
+            <p class="chat-message chat-sent">Yes <span class="chat-timestamp">8:05 am</span></p>
+            <p class="chat-message">Ok Take care and study well..Bye <span class="chat-timestamp">8:06 am</span></p>
+            <p class="chat-message chat-sent">Hmmm sure..Byeee<span class="chat-timestamp">8:06 am</span></p>
+        </div>
+            <div class="message-footer">
+                <img src="img/Smile.png" alt="">
+                <img src="img/paper clip.png" alt="">
+                <input type="text" placeholder="Type a message">
+                <img src="img/microphone.png" alt="">
+            </div>
+    </div>
+   
+</body>
+</html>

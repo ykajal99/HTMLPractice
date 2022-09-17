@@ -1,0 +1,67 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false">
+    
+    <html>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <body style="margin:2%" ng-app="app" ng-controller="myCtrl">
+        
+            <div >
+                <div class="row" ng-repeat="x in AllData">
+                    <div class="col-sm-3">
+                        <input type="Name" class="form-control" ng-model="x.Name" />
+                	</div>
+                    <div class="col-sm-3">
+                        <input type="Name" class="form-control" ng-model="x.Phone" />
+                	</div>
+                    <div class="col-sm-3">
+                        <input type="Name" class="form-control" ng-model="x.Email" />
+                	</div>
+                    <div class="col-sm-3">
+                        <button type="submit" ng-click="submit()" class="btn btn-primary">AddRow</button>
+                        <button type="Refresh" ng-click="refresh($index)" class="btn btn-primary">Refresh</button>
+                     </div>
+                </div>
+            </div>
+                        <br/>
+           <!--                 <br/>
+             <table class="table table-striped">
+                 <thead>
+                  <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="x in AllData">
+                      <td>{{x.Name}}</td>
+                      <td>{{x.Email}}</td>
+                      <td>{{x.Phone}}</td>
+                 </tr>
+                 </tbody>
+             </table>
+            -->
+             <button type="submit" >Submit</button>
+                            
+
+		</body>
+         <script>
+            var app = angular.module('app', []);
+            app.controller('myCtrl', function($scope) {
+               
+                
+                $scope.AllData = [{Name:"",Email:"",Phone:""}] ;
+                $scope.submit = function(){
+                    debugger;
+                	$scope.AllData.push({Name:"",Email:"",Phone:""});
+                }
+                $scope.refresh = function(index){
+                	alert(index);
+                    $scope.AllData.splice(index, 1);
+                }
+            });
+         </script>
+	</html>
+
+</apex:page>
